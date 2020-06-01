@@ -1,0 +1,7 @@
+# The Docker image to run your workspace in. Defaults to gitpod/workspace-full
+image: gitpod/workspace-mysql
+# Commands to start on workspace startup (optional)
+tasks:
+  - init: composer install
+    before: wget https://get.symfony.com/cli/installer -O - | bash && export PATH="$HOME/.symfony/bin:$PATH"
+    
